@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #1E2943;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tool-image {
+  width: 150px;
+}
+
+.icon {
+  width: 38px;
+}
+
+.player-selection {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: 230px;
+  gap: 17px;
+  font-size: 24px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 20px;
+  border: none;
+  background-color: aliceblue;
+  transition: all .3s ease;
+  color: #FF5C00;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  
+}
+
+.button-container {
+  display: flex;
+  gap: 100px;
+  
+  flex-wrap: wrap;
+}
+
+.clicked {
+  transform: scale(1.2);
+  border-color: #FF5C00;
+  box-shadow: 0 0 1rem #FF5C00;
+  background-color: #DADADA;
+}
+
+#round-display {
+  font-weight: 600;
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin: 32px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 100px;
+  gap: 32px;
+}
+
+.scoreboard-container {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.scoreboard {
+  background-color: white;
+  padding: 10px 16px;
+  display: flex;
+  border-radius: 10px;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+}
+
+.round-container {
+  background-color: #EB5A00;
+  padding: 16px 16px ;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  gap: 8px;
+  color: white;
+  transition: all .3s ease;
+}
+
+.round-title {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.round-text {
+  margin: 0px;
+}
+

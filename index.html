@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Pedra Papel Tesoura</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <div id="round-display">Inicie o jogo clicando na opção</div>
+    <div class="content-container">
+      <div class="button-container">
+        <button class="player-selection" data-tool="rock">
+          <img class="tool-image" src="./images/rock.png">
+          Pedra
+        </button>
+        <button class="player-selection" data-tool="paper">
+          <img class="tool-image" src="./images/toilet-paper.png">
+          Papel
+        </button>
+        <button class="player-selection" data-tool="scissors">
+          <img class="tool-image" src="./images/scissors.png">
+          Tesoura
+        </button>
+      </div>
+      <div class="round-container">
+            <p class="round-title">Round atual</p>
+            <p class="round-text">Você ainda não começou o jogo!</p>
+      </div>
+      <div class="scoreboard-container">
+        <div class="scoreboard player-score">
+          <img class="icon" src="./images/profile.png">
+          Você | 0 ponto(s)
+        </div>
+        <div class="scoreboard computer-score">
+          <img class="icon" src="./images/ai.png">
+          Computador | 0 ponto(s)
+        </div>
+      </div>
+    </div>
 </body>
 </html>
