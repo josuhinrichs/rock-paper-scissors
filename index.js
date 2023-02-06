@@ -1,6 +1,10 @@
 let actualRound = 0, playerPoints = 0, computerPoints = 0;
 const roundText = document.querySelector(".round-text");
 const roundContainer = document.querySelector('.round-container');
+const roundDisplay = document.querySelector('#round-display');
+const playerScore = document.querySelector('#player-score-text');
+const computerScore = document.querySelector('#computer-score-text');
+const restartButton = document.querySelector('#restart-game');
 
 let randomThree = max => Math.floor(Math.random() * max);
 
@@ -12,7 +16,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection == computerSelection) {
-    console.log("It's a Tie!");
+    roundText.textContent="EMPATE";
     return "tie";
   } else {
     switch (playerSelection) {
@@ -55,8 +59,42 @@ function playRound(playerSelection, computerSelection) {
 
 function processRound(playerSelection){
   let result = playRound(playerSelection, getComputerChoice());
+  switch(result) {
+    case "player":
+        playerPoints += 1;
+        break;
+    case "computer":
+        computerPoints += 1;
+        break;
+    default:
+        return;
+  }
   actualRound += 1;
+  roundDisplay.textContent = `Round ${actualRound}`;
+  computerScore.textContent = `Computador | ${computerPoints} ponto(s)`;
+  playerScore.textContent = `Você | ${playerPoints} ponto(s)`;
+  if (actualRound == 5){
+    roundDisplay.textContent = `JOGO FINALIZADO`;
+    if (playerPoints > computerPoints){
+        roundText.textContent="PARABÉNS, VOCÊ GANHOU!";
+    } else {
+        roundText.textContent="NÃO FOI DESSA VEZ, O COMPUTADOR GANHOU! ";
+    }
 
+    restartButton.style.visibility = 'visible';
+  }
+
+}
+
+function restartGame(){
+    actualRound = 0;
+    playerPoints = 0;
+    computerPoints = 0;
+    roundDisplay.textContent = `Inicie o jogo clicando na opção`;
+    computerScore.textContent = `Computador | ${computerPoints} ponto(s)`;
+    playerScore.textContent = `Você | ${playerPoints} ponto(s)`;
+    roundText.textContent="Você ainda não começou o jogo!";
+    restartButton.style.visibility = 'hidden';
 }
 
 /*function getPlayerSelection(){
@@ -124,4 +162,6 @@ buttons.forEach( e => {
       processRound(e.dataset.tool);
     }
   })
-})
+});
+
+restartButton.addEventListener('click', restartGame);

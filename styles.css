@@ -106,3 +106,25 @@ body {
   margin: 0px;
 }
 
+#restart-game {
+  background-color: #EB5A00;
+  border: none;
+  width: 200px;
+  height: 30px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  visibility: hidden;
+}
+
+button:hover {
+  border: none;
+  outline: none;
+  background-color: #aaaaaa;
+}
+
+#restart-game:hover {
+  border: none;
+  outline: none;
+  background-color: #af4300;
+}
