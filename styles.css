@@ -85,7 +85,8 @@ body {
   gap: 10px;
 }
 
-.round-container {
+.round-container,
+.choice {
   background-color: #EB5A00;
   padding: 16px 16px ;
   display: flex;
@@ -96,13 +97,20 @@ body {
   transition: all .3s ease;
 }
 
-.round-title {
+.choice-container {
+  display: flex;
+  gap: 32px;
+}
+
+.round-title,
+.choice-title {
   font-weight: 700;
   font-size: 20px;
   margin: 0px;
 }
 
-.round-text {
+.round-text,
+.choice-text {
   margin: 0px;
 }
 
@@ -127,4 +135,16 @@ button:hover {
   border: none;
   outline: none;
   background-color: #af4300;
+}
+
+.computer-choice-container {
+  background-color: #4a64a3;
+}
+
+.player-choice-container {
+  background-color: #63a34a;
+}
+
+.choice {
+  flex-shrink: 0;
 }
